@@ -7,15 +7,15 @@ This is a C++ implementation of supervised latent Dirichlet allocation (sLDA) fo
 
 ## Sample data
 
-A preprocessed 8-class image dataset [2] from [Labelme](http://labelme.csail.mit.edu/). Download [./data.tgz]().
+A preprocessed 8-class image dataset [2] from [Labelme](http://labelme.csail.mit.edu/). See [images.tgz](./sample-data/images.tgz).
 
-UIUC Sports annotation files: annotations and meta information. The source image files can be found [here](http://vision.stanford.edu/lijiali/event_dataset/). (Note: there might be some discrepancies and it is unclear why...)
+UIUC Sports annotation files: [annotations](./sample-data/uiuc-sports-annotations.txt) and [meta information](./sample-data/uiuc-sports-info.txt). The source image files can be found [here](http://vision.stanford.edu/lijiali/event_dataset/). (Note: there might be some discrepancies and it is unclear why...)
 
 ## References
 
-[1] Chong Wang, David M. Blei and Li Fei-Fei. Simultaneous image classification and annotation. In CVPR, 2009. [[PDF]](http://www.cs.cmu.edu/~chongw/papers/WangBleiFeiFei2009.pdf)
+[1] Chong Wang, David M. Blei and Li Fei-Fei. Simultaneous image classification and annotation. In CVPR, 2009. [[PDF]](http://www.cs.columbia.edu/~blei/papers/WangBleiFeiFei2009.pdf)
 
-[2] David M. Blei and Jon McAuliffe. Supervised topic models. In NIPS, 2007. [[PDF]](http://www.cs.princeton.edu/~blei/papers/BleiMcAuliffe2007.pdf)
+[2] David M. Blei and Jon McAuliffe. Supervised topic models. In NIPS, 2007. [[PDF]](http://www.cs.columbia.edu/~blei/papers/BleiMcAuliffe2007.pdf)
 
 
 ---
