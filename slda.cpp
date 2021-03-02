@@ -954,6 +954,9 @@ void slda::infer_only(corpus * c, const settings * setting, const char * directo
     FILE * inf_label_file = NULL;
     sprintf(filename, "%s/inf-labels.dat", directory);
     inf_label_file = fopen(filename, "w");
+    FILE * inf_score_file = NULL;
+    sprintf(filename, "%s/inf-score.dat", directory);
+    inf_score_file = fopen(filename, "w");
 
     for (d = 0; d < c->num_docs; d++)
     {
@@ -979,6 +982,7 @@ void slda::infer_only(corpus * c, const settings * setting, const char * directo
         //do classification
         label = num_classes-1;
         base_score = 0.0;
+        fprintf(inf_score_file, "doc_id:%d ", d);
         for (i = 0; i < num_classes-1; i ++)
         {
             score = 0.0;
@@ -986,6 +990,7 @@ void slda::infer_only(corpus * c, const settings * setting, const char * directo
             {
                 score += eta[i][k] * phi_m[k];
             }
+            fprintf(inf_score_file, "%5.5f ", score);
             if (score > base_score)
             {
                 base_score = score;
@@ -994,7 +999,7 @@ void slda::infer_only(corpus * c, const settings * setting, const char * directo
         }
         if (label == doc->label)
             num_correct ++;
-
+        fprintf(inf_score_file, "\n");
         fprintf(likelihood_file, "%5.5f\n", likelihood);
         fprintf(inf_label_file, "%d\n", label);
     }
