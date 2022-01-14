@@ -23,6 +23,7 @@
 #define CORPUS_H
 
 #include <vector>
+#include <cstddef>
 using namespace std;
 
 class document
